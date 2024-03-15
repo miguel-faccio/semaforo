@@ -1,0 +1,138 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Semaforo</title>
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="icon" href="img/logo.png" type="image/x-icon">
+</head>
+<body class="theme_1">
+    <header>
+        
+        <nav>
+            <div class="container">
+                <button class="button themeButton" id="theme" data-theme="1">Ruinas</button>
+                <button class="button themeButton" id="theme" data-theme="2">Nevada</button>
+                <button class="button themeButton" id="theme" data-theme="3">Cachoeira</button>
+                <button class="button themeButton" id="theme" data-theme="4">Terra Quente</button>
+                <button class="button themeButton" id="theme" data-theme="5">Julgamento</button>
+                <button class="button themeButton" id="theme" data-theme="6">Nova casa</button>
+                <button class="button" id="runButton">Action</button>
+    
+               
+                <button class="button" id="muteButton">Mudo</button>
+                <button class="button closeNavButton">&times;</button>
+              </div>
+        </nav>
+        <button class="button mobileNavButton">&#9776; Menu</button>
+    </header>
+    <main>
+        <div>   <p>SEmaforo</p></div>
+        <div id="achievementModal">
+            <h2>Conquista Desbloqueada!</h2>
+            <a>Parabens! Voce achou o Toby!<span><img src="img/annoying-dog-undertale.gif" ></span></a>
+        </div>
+        <div id="imageRunner"></div>
+        <div id="imageRunner2"></div>
+        <div class="gif">
+            
+        </div>
+        <section >
+
+        </section>
+        <div class="asgore" >
+          
+
+        </div>
+       
+
+    </main>
+    <audio id="bgMusic" loop autoplay>
+        <source src="musica/mus_theme_1.ogg" type="audio/ogg" >
+        <source src="musica/mus_theme_2.ogg" type="audio/ogg">
+        <source src="musica/mus_theme_3.ogg" type="audio/ogg">
+        <source src="musica/mus_theme_4ogg" type="audio/ogg">
+        <source src="musica/mus_theme_5.ogg" type="audio/ogg">
+        <source src="musica/mus_theme_6.ogg" type="audio/ogg">
+       
+        Seu navegador não suporta a tag de áudio.
+      </audio>
+      <audio id="statusSound">
+        <source src="musica/notification.mp3" type="audio/mp3">
+       
+      </audio>
+</body>
+<script src="/js/script.js"></script>
+<script>
+    document.getElementById('runButton').addEventListener('click', function() {
+        var imageRunner = document.getElementById('imageRunner');
+        var themeButton = document.getElementById('theme');
+        var dogMusic = document.getElementById('dogMusic');
+        var achievementModal = document.getElementById('achievementModal');
+
+
+        // Mostra a imagem
+        imageRunner.style.visibility = 'visible';
+      
+
+        bgMusic.pause();
+            bgMusic.currentTime = 0;
+
+            // Toca a nova música
+            var newMusic = new Audio('musica/mus_dogsong.ogg');
+            newMusic.play();
+            achievementModal.style.display = 'block';
+            setTimeout(function() {
+                achievementModal.style.display = 'none';
+                // Retoma a música do tema após 20 segundos
+                newMusic.pause()
+                bgMusic.play();
+                imageRunner.style.display = 'none';
+                
+               
+            }, 20000); // 20 segundos em milissegundos
+    });
+</script>
+<script>
+    
+    fetch("https://niloweb.com.br/transit-room/api/reg_endpoint.php")
+    .then(resposta => resposta.json())
+    .then(dados1 => {
+        if (dados1[0].res == "B") {
+            document.querySelector('section').className = 'soul2';
+            document.querySelector('.asgore').className = 'asgoreB';
+            document.getElementById('statusSound').play();
+            
+        } else if (dados1[0].res == "L") {
+            document.querySelector('section').className = 'soul1';
+            document.querySelector('.asgore').className = 'asgoreL';
+            document.getElementById('statusSound').play();
+            
+        } else {
+            document.querySelector('section').className = 'soul3';
+            document.querySelector('.asgore').className = 'asgoreA';
+            document.getElementById('statusSound').play();
+        }
+
+    });
+    document.addEventListener("DOMContentLoaded", function() {
+    const mobileNavButton = document.querySelector('.mobileNavButton');
+    const nav = document.querySelector('nav');
+    const closeNavButton = document.querySelector('.closeNavButton');
+
+    mobileNavButton.addEventListener('click', function() {
+        nav.style.display = 'block';
+    });
+
+    closeNavButton.addEventListener('click', function() {
+        nav.style.display = 'none';
+    });
+});
+setInterval(function() {
+    location.reload();
+}, 60000);
+
+
+</script>
+
+</html>

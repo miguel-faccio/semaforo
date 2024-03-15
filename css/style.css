@@ -1,0 +1,453 @@
+
+@font-face {
+    font-family: Undertale;
+    src: url('/fontes/undertale-logo-font/MonsterFriendBack.otf') format('opentype'), /* Formato da fonte */
+        
+}
+@font-face{
+    font-family: Undertale2;
+    src: url('/fontes/undertale-logo-font/MonsterFriendFore.otf') format('opentype');
+}
+@font-face{
+    font-family: under;
+    src: url('/fontes/8bitoperator-jve/8bitoperator_jve.ttf') format('opentype');
+}
+
+
+body.theme_1 {
+    background-image: url(/img/ruins.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed; 
+    transition: background-color 0.5s ease;
+    color: #ffffff;
+    
+}
+body.theme_2{
+    background-image: url(/img/snowdin_path_by_ildikokumari_d9mjgrx-fullview.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed; 
+    transition: background-color 0.5s ease;
+    color: #098ee7;
+    nav{
+        background-color: #6895b3;
+    }
+}
+body.theme_3{
+    background-image: url(/img/waterfall_undertale_by_stargirl9510_ddrd2ch-fullview.jpg);
+    background-repeat: no-repeat;
+    background-size: COVER;
+    background-attachment: fixed; 
+    transition: background-color 0.5s ease;
+    color: #def2ff;
+    nav{
+        background-color: #191a64;
+    }
+}
+body.theme_4{
+    background-image: url(/img/1f74387befcb72c1020b4f401cc847ae.jpg);
+    background-repeat: no-repeat;
+    background-size: COVER;
+    background-attachment: fixed; 
+    transition: background-color 0.5s ease;
+    color: #ffdcc8;
+    nav{
+        background-color: #642e0a;
+    }
+}
+body.theme_5{
+    background-image: url(/img/judge.jpg);
+    background-repeat: no-repeat;
+    background-size: COVER;
+    background-attachment: fixed; 
+    transition: background-color 0.5s ease;
+    color: #6d581d;
+    nav{
+        background-color: #e4ba00;
+    }
+}
+body.theme_6{
+    background-image: url(/img/imagem_2024-03-14_232018123_updated.png);
+    background-repeat: no-repeat;
+    background-size: COVER;
+    background-attachment: fixed; 
+    transition: background-color 0.5s ease;
+    color: #000000;
+    nav{
+        background-color: #ffffff;
+    }
+}
+
+nav{
+    width: 100%;
+    height: 60px;
+    background-color: rgb(138, 112, 153);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+main{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+p {
+    font-family: Undertale2;
+    
+    font-size: 40px;
+}
+@keyframes gif-animation {
+    0% { background-image: url('/img/frames/pixil-frame-0.png'); }
+    12.5% { background-image: url('/img/frames/pixil-frame-1.png'); }
+    25% { background-image: url('/img/frames/pixil-frame-2.png'); }
+    37.5% { background-image: url('/img/frames/pixil-frame-3.png'); }
+    50% { background-image: url('/img/frames/pixil-frame-4.png'); }
+    62.5% { background-image: url('/img/frames/pixil-frame-5.png'); }
+    75% {background-image: url('/img/frames/pixil-frame-6.png');}
+    100% {background-image: url('/img/frames/pixil-frame-7.png');}
+   
+  }
+  
+  .gif {
+    position: relative;
+   bottom: 60px;
+    width: 225px; /* Ajuste conforme necessário */
+    height: 600px; /* Ajuste conforme necessário */
+    z-index: 6;
+    animation: gif-animation 2.8s steps(8) infinite; /* steps(6) para especificar o número de frames */
+  }
+
+  .soul1{
+    
+    width: 200px; 
+    height: 400px;
+    z-index: 1;
+    margin: auto;
+    position: absolute;
+    top: 233px;
+    box-shadow: 
+    inset 0 0 50px #1f993a,
+    inset 20px 0 60px #51ff00,
+    inset -20px 0 60px #2f571c,
+    inset 20px 0 300px #51ff00,
+    inset -20px 0 300px #2f571c,
+    0 0 50px #33ec33,
+    -10px 0 60px #51ff00,
+    10px 0 60px #2f571c;
+   
+    
+  }
+  .soul2 {
+    width: 200px;
+    height: 400px;
+    z-index: 1;
+    margin: auto;
+    position: absolute;
+    top: 233px;
+    box-shadow: 
+        inset 0 0 50px #421212,
+        inset 20px 0 60px #ff6666, /* Vermelho claro */
+        inset -20px 0 60px #990000, /* Vermelho escuro */
+        inset 20px 0 300px #ff6666, /* Vermelho claro */
+        inset -20px 0 300px #990000, /* Vermelho escuro */
+        0 0 50px #a33434,
+        -10px 0 60px #ff6666, /* Vermelho claro */
+        10px 0 60px #990000; /* Vermelho escuro */
+}
+.soul3 {
+    width: 200px;
+    height: 400px;
+    z-index: 1;
+    margin: auto;
+    position: absolute;
+    top: 233px;
+    box-shadow: 
+        inset 0 0 50px #faf61f,
+        inset 20px 0 60px #ffff66, /* Amarelo claro */
+        inset -20px 0 60px #b3b300, /* Amarelo escuro */
+        inset 20px 0 300px #ffff66, /* Amarelo claro */
+        inset -20px 0 300px #b3b300, /* Amarelo escuro */
+        0 0 50px #f0e089,
+        -10px 0 60px #ffff66, /* Amarelo claro */
+        10px 0 60px #b3b300; /* Amarelo escuro */
+}
+
+
+  
+/* Estilo base do botão */
+.button {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 10px;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+    border: 2px solid #ffffff;
+    border-radius: 5px;
+    background-color: #000000;
+    color: #ffffff;
+    transition: background-color 0.3s, color 0.3s;
+    font-family: Undertale;
+  }
+  
+  /* Efeito hover */
+  .button:hover {
+    background-color: #000000;
+    border: #d37000 2px solid;
+    color: #d37000; /* Cor vermelha, semelhante ao Undertale */
+  }
+  
+  /* Efeito de foco */
+  .button:focus {
+    outline: none;
+  }
+  
+  /* Efeito de clique */
+  .button:active {
+    transform: translateY(1px); /* Efeito de pressionar para baixo */
+  }
+  div.asgoreL{
+    position: relative;
+    bottom: 50px;
+    width: 1008px;
+    height: 244px;
+    background-image: url(/img/livre.png);
+
+  }
+  div.asgoreB{
+    position: relative;
+    bottom: 50px;
+    width: 1008px;
+    height: 244px;
+    background-image: url(/img/vermelho.png);
+
+  }
+  div.asgoreA{
+    position: relative;
+    bottom: 50px;
+    width: 1008px;
+    height: 244px;
+    background-image: url(/img/espera.png);
+
+  }
+  #imageRunner {
+    position: fixed;
+    top: 50%;
+    left: 0;
+    width: 100px; /* largura da imagem */
+    height: 100px; /* altura da imagem */
+    background-image: url('/img/toby-fox.gif');
+    background-size: cover;
+    background-position: center;
+    animation: runAnimation 2.5s linear infinite; /* tempo de animação */
+    visibility: hidden; /* esconde a imagem inicialmente */
+}
+
+#achievementModal {
+    display: none;
+    position: fixed;
+    top: 20%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 20px;
+    background-color: #000000;
+    color: #ffffff;
+    border: 2px solid #ffffff;
+    
+    z-index: 9999;
+}
+ h2{
+    font-family: Undertale2;
+}
+ a{
+    font-family: Undertale;
+}
+span img{
+    width: 100px;
+    height: 50px;
+}
+@keyframes runAnimation {
+    from {
+        left: 100%;
+    }
+    to {
+        left: -100%; /* posição final da imagem */
+    }
+}
+.mobileNavButton {
+    display: none; /* Esconde o botão em telas maiores */
+}
+.closeNavButton{
+    display: none;
+}
+ /* Estilos para telas com largura menor ou igual a 768px (tamanhos comuns de dispositivos móveis) */
+@media screen and (max-width: 768px) {
+    body.theme_1 {
+        background-attachment: scroll; /* Altera para scroll para dispositivos móveis */
+    }
+    main{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    nav {
+        height: auto; /* Ajusta a altura da navegação automaticamente */
+        flex-direction: column; /* Alinha os itens verticalmente */
+    }
+    @keyframes gif-animation {
+        0% { background-image: url('/img/frame_menor4/pixil-frame-0.png'); }
+        12.5% { background-image: url('/img/frame_menor4/pixil-frame-1.png'); }
+        25% { background-image: url('/img/frame_menor4/pixil-frame-2.png'); }
+        37.5% { background-image: url('/img/frame_menor4/pixil-frame-3.png'); }
+        50% { background-image: url('/img/frame_menor4/pixil-frame-4.png'); }
+        62.5% { background-image: url('/img/frame_menor4/pixil-frame-5.png'); }
+        75% {background-image: url('/img/frame_menor4/pixil-frame-6.png');}
+        100% {background-image: url('/img/frame_menor4/pixil-frame-7.png');}
+       
+      }
+      
+      .gif {
+        background-repeat: no-repeat;
+        position: relative;
+       left: 34px;
+       top: 100px;
+        width: 75px; /* Ajuste conforme necessário */
+        height: 200px; /* Ajuste conforme necessário */
+        z-index: 6;
+        animation: gif-animation 2.8s steps(8) infinite; /* steps(6) para especificar o número de frames */
+      }
+
+    .button {
+        font-size: 14px; /* Aumenta o tamanho da fonte dos botões */
+    }
+
+    #achievementModal {
+        width: 80%; /* Ajusta a largura do modal */
+    }
+    .soul1{
+    
+        width: 75px; 
+        height: 140px;
+        z-index: 1;
+        margin: auto;
+        position: absolute;
+        top: 260px;
+        box-shadow: 
+        inset 0 0 50px #1f993a,
+        inset 20px 0 60px #51ff00,
+        inset -20px 0 60px #2f571c,
+        inset 20px 0 300px #51ff00,
+        inset -20px 0 300px #2f571c,
+        0 0 50px #33ec33,
+        -10px 0 60px #51ff00,
+        10px 0 60px #2f571c;
+       
+        
+      }
+      .soul2 {
+        width: 65px;
+        height: 140px;
+        z-index: 1;
+        margin: auto;
+        position: absolute;
+        top: 260px;
+        box-shadow: 
+            inset 0 0 50px #421212,
+            inset 20px 0 60px #fd4545, /* Vermelho claro */
+            inset -20px 0 60px #ff1111, /* Vermelho escuro */
+            inset 20px 0 300px #ff0000, /* Vermelho claro */
+            inset -20px 0 300px #e80101, /* Vermelho escuro */
+            0 0 50px #a33434,
+            -10px 0 60px #f20505, /* Vermelho claro */
+            10px 0 60px #990000; /* Vermelho escuro */
+    }
+    .soul3 {
+        width: 75px;
+        height: 140px;
+        z-index: 1;
+        margin: auto;
+        position: absolute;
+        top: 260px;
+        box-shadow: 
+            inset 0 0 50px #faf61f,
+            inset 20px 0 60px #ffff66, /* Amarelo claro */
+            inset -20px 0 60px #b3b300, /* Amarelo escuro */
+            inset 20px 0 300px #ffff66, /* Amarelo claro */
+            inset -20px 0 300px #b3b300, /* Amarelo escuro */
+            0 0 50px #f0e089,
+            -10px 0 60px #ffff66, /* Amarelo claro */
+            10px 0 60px #b3b300; /* Amarelo escuro */
+    }
+    div.asgoreL{
+        position: relative;
+        bottom: 70px;
+        width: 366px;
+        height: 90px;
+        background-image: url(/img/livre.png);
+        background-size: cover;
+
+    
+      }
+      div.asgoreB{
+        position: relative;
+        bottom: 70px;
+        width: 366px;
+        height: 90px;
+        background-image: url(/img/vermelho.png);
+        background-size: cover;
+
+    
+      }
+      div.asgoreA{
+        position: relative;
+        bottom: 70px;
+        width: 366px;
+        height: 90px;
+        background-image: url(/img/espera.png);
+        background-size: cover;
+
+    
+      }
+      .mobileNavButton {
+        display: block; /* Mostra o botão em telas menores */
+    }
+    .closeNavButton{
+        display: block;
+    }
+    nav {
+        display: none; /* Esconde a navegação por padrão em telas menores */
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.8); /* Fundo semi-transparente */
+        z-index: 9999; /* Garante que a navegação esteja acima de outros elementos */
+    }
+    nav .container {
+        position: relative;
+        top: 50%; /* Ajusta para que a navegação fique no meio da tela */
+        transform: translateY(-50%);
+        text-align: center;
+    }
+}
+    
+
+
+/* Estilos para telas com largura menor ou igual a 480px (dispositivos móveis menores) */
+@media screen and (max-width: 480px) {
+    p {
+        font-size: 24px; /* Reduz o tamanho da fonte do parágrafo */
+    }
+
+    .gif {
+        width: 150px; /* Reduz o tamanho da div do gif */
+        height: 400px; /* Ajusta a altura */
+    }
+}
