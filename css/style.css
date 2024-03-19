@@ -15,56 +15,78 @@
 
 
 body.theme_1 {
-    background-image: url(/img/ruins.jpg);
+    background-image: url(/img/themes/ruins/ruins_grande.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed; 
     transition: background-color 0.5s ease;
     color: #ffffff;
     
+        nav{
+            background-color: rgba(169, 45, 194, 0.452); /* cor de fundo com opacidade */
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); 
+        }
+    
 }
 body.theme_2{
-    background-image: url(/img/snowdin_path_by_ildikokumari_d9mjgrx-fullview.jpg);
+    background-image: url(/img/themes/snowdin/snowdin_1.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed; 
     transition: background-color 0.5s ease;
     color: #098ee7;
     nav{
-        background-color: #6895b3;
+        
+            background-color: rgba(31, 149, 245, 0.5); /* cor de fundo com opacidade */
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); 
+        
     }
 }
 body.theme_3{
-    background-image: url(/img/waterfall_undertale_by_stargirl9510_ddrd2ch-fullview.jpg);
+    background-image: url(/img/themes/waterfall/waterfall_grande.jpg);
     background-repeat: no-repeat;
     background-size: COVER;
-    background-attachment: fixed; 
+    background-attachment: initial; 
     transition: background-color 0.5s ease;
     color: #def2ff;
     nav{
-        background-color: #191a64;
+       
+            background-color: rgba(12, 22, 163, 0.5); /* cor de fundo com opacidade */
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); 
+        
     }
 }
 body.theme_4{
-    background-image: url(/img/1f74387befcb72c1020b4f401cc847ae.jpg);
+    background-image: url(/img/themes/htoland/hotland_pequeno.png);
     background-repeat: no-repeat;
     background-size: COVER;
     background-attachment: fixed; 
     transition: background-color 0.5s ease;
     color: #ffdcc8;
     nav{
-        background-color: #642e0a;
+       
+            background-color: rgba(248, 98, 11, 0.5); /* cor de fundo com opacidade */
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); 
+        
     }
 }
 body.theme_5{
-    background-image: url(/img/judge.jpg);
+    background-image: url(/img/themes/judgment/judge_pequeno.jpg);
     background-repeat: no-repeat;
     background-size: COVER;
     background-attachment: fixed; 
     transition: background-color 0.5s ease;
     color: #6d581d;
     nav{
-        background-color: #e4ba00;
+        
+            background-color: rgba(255, 217, 0, 0.5); /* cor de fundo com opacidade */
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); 
+        
     }
 }
 body.theme_6{
@@ -75,10 +97,39 @@ body.theme_6{
     transition: background-color 0.5s ease;
     color: #000000;
     nav{
-        background-color: #ffffff;
+        
+            background-color: rgba(255, 255, 255, 0.5); /* cor de fundo com opacidade */
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); 
+        
     }
 }
-
+body.theme_7{
+    background-image: url(/img/themes/core/core_pequeno.jpg);
+    background-repeat: no-repeat;
+    background-size: COVER;
+    background-attachment: fixed; 
+    transition: background-color 0.5s ease;
+    color: #ffffff;
+    nav{
+        background-color: rgba(255, 0, 0, 0.5); /* cor de fundo com opacidade */
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); 
+    }
+}
+body.theme_8{
+    background-image: url(/img/themes/finale/finale2.jpg);
+    background-repeat: no-repeat;
+    background-size: COVER;
+    background-attachment: fixed; 
+    transition: background-color 0.5s ease;
+    color: #ffffff;
+    nav{
+        background-color: rgba(65, 65, 65, 0.5); /* cor de fundo com opacidade */
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); 
+    }
+}
 
 nav{
     width: 100%;
@@ -86,7 +137,8 @@ nav{
     background-color: rgb(138, 112, 153);
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
+
 }
 main{
     width: 100%;
@@ -177,6 +229,23 @@ p {
         10px 0 60px #b3b300; /* Amarelo escuro */
 }
 
+div.joguinhos{
+    min-width: 50px;
+   min-height: 50px;
+  
+   
+}
+div.joguinhos button{
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+div.joguinhos img{
+    width: 30px;
+    height: 30px;
+}
 
   
 /* Estilo base do botão */
@@ -279,16 +348,265 @@ span img{
         left: -100%; /* posição final da imagem */
     }
 }
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  background-color: #000000;
+  border: 2px solid #fff;
+  
+  min-width: 160px;
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+  padding: 12px 16px;
+  z-index: 1;
+}
+
+.dropdown-menu li {
+  list-style: none;
+  margin: 5px;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+
+.dropdown button:hover {
+  background-color: #3e8e41;
+}
 .mobileNavButton {
     display: none; /* Esconde o botão em telas maiores */
 }
 .closeNavButton{
     display: none;
 }
+/* COnfiguração dfe papel de parede*/ 
+
+@media screen and (max-width:1920px) {
+    body.theme_1 {
+        background-image: url(/img/themes/ruins/ruins_pequeno.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-attachment: fixed; 
+        transition: background-color 0.5s ease;
+        color: #ffffff;
+        
+            nav{
+                background-color: rgba(169, 45, 194, 0.452); /* cor de fundo com opacidade */
+                border-radius: 10px;
+                box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); 
+            }
+        
+    }
+    body.theme_2{
+        background-image: url(/img/themes/snowdin/snow.gif);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-attachment: fixed; 
+        transition: background-color 0.5s ease;
+        color: #098ee7;
+        nav{
+            
+                background-color: rgba(31, 149, 245, 0.5); /* cor de fundo com opacidade */
+                border-radius: 10px;
+                box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); 
+            
+        }
+    }
+    body.theme_3{
+        background-image: url(/img/themes/waterfall/waterfall_pequeno.jpg);
+        background-repeat: no-repeat;
+        background-size: COVER;
+        background-attachment: initial; 
+        transition: background-color 0.5s ease;
+        color: #def2ff;
+        nav{
+           
+                background-color: rgba(12, 22, 163, 0.5); /* cor de fundo com opacidade */
+                border-radius: 10px;
+                box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); 
+            
+        }
+    }
+    body.theme_4{
+        background-image: url(/img/themes/htoland/hotland_pequeno.png);
+        background-repeat: no-repeat;
+        background-size: COVER;
+        background-attachment: fixed; 
+        transition: background-color 0.5s ease;
+        color: #ffdcc8;
+        nav{
+           
+                background-color: rgba(248, 98, 11, 0.5); /* cor de fundo com opacidade */
+                border-radius: 10px;
+                box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); 
+            
+        }
+    }
+    body.theme_5{
+        background-image: url(/img/themes/judgment/judge_pequeno.jpg);
+        background-repeat: no-repeat;
+        background-size: COVER;
+        background-attachment: fixed; 
+        transition: background-color 0.5s ease;
+        color: #6d581d;
+        nav{
+            
+                background-color: rgba(255, 217, 0, 0.5); /* cor de fundo com opacidade */
+                border-radius: 10px;
+                box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); 
+            
+        }
+    }
+    body.theme_6{
+        background-image: url(/img/imagem_2024-03-14_232018123_updated.png);
+        background-repeat: no-repeat;
+        background-size: COVER;
+        background-attachment: fixed; 
+        transition: background-color 0.5s ease;
+        color: #000000;
+        nav{
+            
+                background-color: rgba(255, 255, 255, 0.5); /* cor de fundo com opacidade */
+                border-radius: 10px;
+                box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); 
+            
+        }
+    }
+    body.theme_7{
+        background-image: url(/img/themes/core/core_pequeno.jpg);
+        background-repeat: no-repeat;
+        background-size: COVER;
+        background-attachment: fixed; 
+        transition: background-color 0.5s ease;
+        color: #ffffff;
+        nav{
+            background-color: rgba(255, 0, 0, 0.5); /* cor de fundo com opacidade */
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); 
+        }
+    }
+    body.theme_8{
+        background-image: url(/img/themes/finale/finale2.jpg);
+        background-repeat: no-repeat;
+        background-size: COVER;
+        background-attachment: fixed; 
+        transition: background-color 0.5s ease;
+        color: #000000;
+        nav{
+            background-color: rgba(65, 65, 65, 0.5); /* cor de fundo com opacidade */
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); 
+        }
+    }
+}
+
+
+
+
  /* Estilos para telas com largura menor ou igual a 768px (tamanhos comuns de dispositivos móveis) */
 @media screen and (max-width: 768px) {
     body.theme_1 {
-        background-attachment: scroll; /* Altera para scroll para dispositivos móveis */
+        background-image: url(/img/themes/ruins/ruins_mobile.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-attachment: fixed; 
+        transition: background-color 0.5s ease;
+        color: #ffffff;
+        
+            nav{
+                background-color: rgba(169, 45, 194, 0.452); /* cor de fundo com opacidade */
+                border-radius: 10px;
+                box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); 
+            }
+        
+    }
+    
+    body.theme_3{
+        background-image: url(/img/themes/waterfall/waterfall_grande.jpg);
+        background-repeat: no-repeat;
+        background-size: COVER;
+        background-attachment: initial; 
+        transition: background-color 0.5s ease;
+        color: #def2ff;
+        nav{
+           
+                background-color: rgba(12, 22, 163, 0.5); /* cor de fundo com opacidade */
+                border-radius: 10px;
+                box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); 
+            
+        }
+    }
+    body.theme_4{
+        background-image: url(/img/themes/htoland/hotland_pequeno.png);
+        background-repeat: no-repeat;
+        background-size: COVER;
+        background-attachment: fixed; 
+        transition: background-color 0.5s ease;
+        color: #ffdcc8;
+        nav{
+           
+                background-color: rgba(248, 98, 11, 0.5); /* cor de fundo com opacidade */
+                border-radius: 10px;
+                box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); 
+            
+        }
+    }
+    body.theme_5{
+        background-image: url(/img/themes/judgment/judge_pequeno.jpg);
+        background-repeat: no-repeat;
+        background-size: COVER;
+        background-attachment: fixed; 
+        transition: background-color 0.5s ease;
+        color: #6d581d;
+        nav{
+            
+                background-color: rgba(255, 217, 0, 0.5); /* cor de fundo com opacidade */
+                border-radius: 10px;
+                box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); 
+            
+        }
+    }
+    body.theme_6{
+        background-image: url(/img/imagem_2024-03-14_232018123_updated.png);
+        background-repeat: no-repeat;
+        background-size: COVER;
+        background-attachment: fixed; 
+        transition: background-color 0.5s ease;
+        color: #000000;
+        nav{
+            
+                background-color: rgba(255, 255, 255, 0.5); /* cor de fundo com opacidade */
+                border-radius: 10px;
+                box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); 
+            
+        }
+    }
+    body.theme_7{
+        background-image: url(/img/themes/core/core_pequeno.jpg);
+        background-repeat: no-repeat;
+        background-size: COVER;
+        background-attachment: fixed; 
+        transition: background-color 0.5s ease;
+        color: #ffffff;
+        nav{
+            background-color: rgba(255, 0, 0, 0.5); /* cor de fundo com opacidade */
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); 
+        }
+    }
+    body.theme_8{
+        background-image: url(/img/themes/finale/finale2.jpg);
+        background-repeat: no-repeat;
+        background-size: COVER;
+        background-attachment: fixed; 
+        transition: background-color 0.5s ease;
+        color: #ffffff;
+        nav{
+            background-color: rgba(65, 65, 65, 0.5); /* cor de fundo com opacidade */
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); 
+        }
     }
     main{
         display: flex;
@@ -388,7 +706,7 @@ span img{
     div.asgoreL{
         position: relative;
         bottom: 70px;
-        width: 366px;
+        width: 369px;
         height: 90px;
         background-image: url(/img/livre.png);
         background-size: cover;
@@ -398,7 +716,7 @@ span img{
       div.asgoreB{
         position: relative;
         bottom: 70px;
-        width: 366px;
+        width: 369px;
         height: 90px;
         background-image: url(/img/vermelho.png);
         background-size: cover;
@@ -408,7 +726,7 @@ span img{
       div.asgoreA{
         position: relative;
         bottom: 70px;
-        width: 366px;
+        width: 369px;
         height: 90px;
         background-image: url(/img/espera.png);
         background-size: cover;

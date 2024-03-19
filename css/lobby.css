@@ -1,0 +1,143 @@
+body {
+    background-color: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    box-shadow: inset 10px 10px 100px rgb(255, 254, 254);
+    animation: move-shadow 2s infinite alternate;
+}
+
+
+main {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+audio{display: none;}
+
+.game {
+    position: relative;
+    width: 170px;
+    height: 170px;
+    background: none;
+    margin: 10px;
+    border: none;
+    cursor: pointer;
+    position: relative;
+  animation: waveAnimation 2s ease-in-out infinite;
+  
+    
+}
+.Determination {
+    animation-duration: 3s;
+  }
+  
+  .Bravery {
+    animation-duration: 2.5s;
+  }
+  
+  .Justice {
+    animation-duration: 3.5s;
+  }
+  
+  .Kindness {
+    animation-duration: 2s;
+  }
+  
+  .Patience {
+    animation-duration: 2.8s;
+  }
+  
+  .Integrity {
+    animation-duration: 2.3s;
+  }
+  
+  .Perseverance {
+    animation-duration: 3s;
+  }
+  
+  @keyframes waveAnimation {
+    0% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-30px);
+    }
+    100% {
+      transform: translateY(0);
+    }
+  }
+.Determination:hover{
+    scale: 1.2;
+    filter: drop-shadow(0px 0px 70px rgb(255, 0, 0));
+        
+}
+
+.Bravery:hover{
+    scale: 1.2;
+    filter: drop-shadow(0px 0px 70px #ff9500);
+   
+}
+.Justice:hover{
+    scale: 1.2;
+    filter: drop-shadow(0px 0px 70px rgb(251, 255, 3));
+   
+}
+.Kindness:hover{
+    scale: 1.2;
+    filter: drop-shadow(0px 0px 70px #51ff00);
+   
+}
+.Patience:hover{
+    scale: 1.2;
+    filter: drop-shadow(0px 0px 70px #00f7ff);
+   
+}
+.Integrity:hover{
+    scale: 1.2;
+    filter: drop-shadow(0px 0px 70px rgb(0, 4, 255));
+   
+}
+.Perseverance:hover{
+    scale: 1.2;
+    filter: drop-shadow(0px 0px 70px rgb(132, 0, 255));
+   
+}
+
+.game img {
+    width: 100%;
+    height: 100%;
+}
+.info{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.c {
+    display: none;
+    width: 150px;
+    height: 200px;
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 10px;
+    border-radius: 5px;
+    margin: 12px;
+    
+}
+
+@media screen and (max-width: 768px) {
+    .game {
+        width: calc(50% - 20px);
+        margin: 5px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .game {
+        width: calc(100% - 20px);
+        margin: 5px;
+    }
+}

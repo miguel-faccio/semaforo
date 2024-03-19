@@ -1,0 +1,151 @@
+@font-face {
+  font-family: Undertale;
+  src: url('/fontes/undertale-logo-font/MonsterFriendBack.otf') format('opentype'), /* Formato da fonte */
+      
+}
+@font-face{
+  font-family: Undertale2;
+  src: url('/fontes/undertale-logo-font/MonsterFriendFore.otf') format('opentype');
+}
+@font-face{
+  font-family: under;
+  src: url('/fontes/8bitoperator-jve/8bitoperator_jve.ttf') format('opentype');
+}
+
+body, html {
+    margin: 0;
+    overflow: hidden;
+    display: grid;
+    place-items: center;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+    background-color: #000;
+  }
+  audio{
+    display: none;
+  }
+  .loader-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+  }
+  
+
+/* Coração */
+.loader {
+  width: 100px; /* largura */
+  height: 100px; /* altura */
+  position: relative;
+  animation: pulse 2s infinite, subir 3s ease-in-out infinite;
+}
+
+.loader:before,
+.loader:after {
+  content: '';
+  position: absolute;
+  top: 0;
+  width: 50px; /* metade da largura do coração */
+  height: 80px; /* metade da altura do coração */
+  border-radius: 0; /* Sem bordas arredondadas */
+ 
+  animation: colorChange 14s infinite;
+}
+
+/* Posicionamento */
+.loader:before {
+  left: 50px; /* metade da largura do coração */
+  transform: rotate(-45deg);
+  transform-origin: 0 100%;
+}
+
+.loader:after {
+  left: 0;
+  transform: rotate(45deg);
+  transform-origin: 100% 100%;
+}
+
+/* Animação do pulso */
+@keyframes pulse {
+  0%, 100% {
+    transform: scale(0.95);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+}
+@keyframes subir{
+  
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(10px);
+    }
+}
+  
+  /* Animação da mudança de cor */
+  @keyframes colorChange {
+    0% {
+      background: #ff3b30; /* Vermelho */
+      box-shadow: 0 0 500px 150px rgba(255, 59, 48, 0.7); /* Brilho vermelho */
+    }
+    14.2857% {
+      background: #ff9500; /* Laranja */
+      box-shadow: 0 0 50px 15px rgba(255, 149, 0, 0.7); /* Brilho laranja */
+    }
+    28.5714% {
+      background: #ffcc00; /* Amarelo */
+      box-shadow: 0 0 50px 15px rgba(255, 204, 0, 0.7); /* Brilho amarelo */
+    }
+    42.8571% {
+      background: #05921c; /* Verde */
+      box-shadow: 0 0 50px 15px rgba(5, 146, 28, 0.7); /* Brilho verde */
+    }
+    57.1428% {
+      background: #01c4ff; /* Ciano */
+      box-shadow: 0 0 50px 15px rgba(1, 196, 255, 0.7); /* Brilho ciano */
+    }
+    71.4285% {
+      background: #1803d3; /* Azul Escuro */
+      box-shadow: 0 0 50px 15px rgba(24, 3, 211, 0.7); /* Brilho azul escuro */
+    }
+    85.7142% {
+      background: #5906b9; /* Roxo */
+      box-shadow: 0 0 50px 15px rgba(89, 6, 185, 0.7); /* Brilho roxo */
+    }
+    100% {
+      background: #ff3b30; /* Voltando ao Vermelho */
+      box-shadow: 0 0 500px 150px rgba(255, 59, 48, 0.7); /* Brilho vermelho */
+    }
+  }
+  
+  
+  .loader-text {
+    margin-top: 50px;
+    font-size: 24px;
+    font-family: Undertale2;
+    color: #fff;
+  }
+  
+  .progress-bar {
+    width: 400px;
+    height: 20px;
+    background-color: #f3f3f3;
+   
+    margin-top: 20px;
+  }
+  
+  .progress {
+    width: 0;
+    height: 100%;
+    background-color: #db3434;
+    
+    transition: width 0.5s ease-in-out;
+  }
+  
+
+  

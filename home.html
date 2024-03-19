@@ -11,19 +11,43 @@
         
         <nav>
             <div class="container">
-                <button class="button themeButton" id="theme" data-theme="1">Ruinas</button>
-                <button class="button themeButton" id="theme" data-theme="2">Nevada</button>
-                <button class="button themeButton" id="theme" data-theme="3">Cachoeira</button>
-                <button class="button themeButton" id="theme" data-theme="4">Terra Quente</button>
-                <button class="button themeButton" id="theme" data-theme="5">Julgamento</button>
-                <button class="button themeButton" id="theme" data-theme="6">Nova casa</button>
+                <button class="button" onclick ="toggleDropdown()" >Themas</button>
+                <ul id="dropdownMenu" class="dropdown-menu">
+                    <li>
+                        <button class="button themeButton" id="theme" data-theme="1" auto>Ruinas</button>
+                    </li>
+                    <li>
+                        <button class="button themeButton" id="theme" data-theme="2">Nevada</button>
+                    </li>
+                    <li>
+                        <button class="button themeButton" id="theme" data-theme="3">Cachoeira</button>
+                    </li>
+                    <li>
+                        <button class="button themeButton" id="theme" data-theme="4">Terra Quente</button>
+                    </li>
+                    <li>
+                        <button class="button themeButton" id="theme" data-theme="7">Nucleo</button>
+                    </li>
+                    <li>
+                        <button class="button themeButton" id="theme" data-theme="5">Julgamento</button>
+                    </li>
+                    <li>
+                        <button class="button themeButton" id="theme" data-theme="6">Nova casa</button>
+                    </li>
+                    <li>
+                        <button class="button themeButton" id="theme" data-theme="8">Finale</button>
+                    </li>
                 
+                </ul>
                 
                 <button class="button" id="runButton">Action</button>
     
                
                 <button class="button" id="muteButton">Mudo</button>
                 <button class="button closeNavButton">&times;</button>
+              </div>
+              <div class="joguinhos">
+                <button class="button" id="Games"><img src="img/logo/determination.png"></button>
               </div>
         </nav>
         <button class="button mobileNavButton">&#9776; Menu</button>
@@ -49,6 +73,7 @@
        
 
     </main>
+
     <audio id="bgMusic" loop autoplay>
         
         <source src="musica/mus_theme_1.ogg" type="audio/ogg" >
@@ -57,6 +82,8 @@
         <source src="musica/mus_theme_4ogg" type="audio/ogg">
         <source src="musica/mus_theme_5.ogg" type="audio/ogg">
         <source src="musica/mus_theme_6.ogg" type="audio/ogg">
+        <source src="musica/mus_theme_7.ogg" type="audio/ogg">
+        <source src="musica/mus_theme_8.ogg" type="audio/ogg">
         
        
         Seu navegador não suporta a tag de áudio.
@@ -98,27 +125,7 @@
     });
 </script>
 <script>
-    
-    fetch("https://niloweb.com.br/transit-room/api/reg_endpoint.php")
-    .then(resposta => resposta.json())
-    .then(dados1 => {
-        if (dados1[0].res == "B") {
-            document.querySelector('section').className = 'soul2';
-            document.querySelector('.asgore').className = 'asgoreB';
-            document.getElementById('statusSound').play();
-            
-        } else if (dados1[0].res == "L") {
-            document.querySelector('section').className = 'soul1';
-            document.querySelector('.asgore').className = 'asgoreL';
-            document.getElementById('statusSound').play();
-            
-        } else {
-            document.querySelector('section').className = 'soul3';
-            document.querySelector('.asgore').className = 'asgoreA';
-            document.getElementById('statusSound').play();
-        }
-
-    });
+ 
     document.addEventListener("DOMContentLoaded", function() {
     const mobileNavButton = document.querySelector('.mobileNavButton');
     const nav = document.querySelector('nav');
@@ -132,11 +139,11 @@
         nav.style.display = 'none';
     });
 });
-setInterval(function() {
-    location.reload();
-}, 60000);
 
-
+document.getElementById("Games").addEventListener("click", function() {
+      // Redirecionar para outra tela
+      window.location.href = "/tela_carregamento/mainC.html"; // Substitua "outraTela.html" pelo caminho da sua outra página
+    });
 </script>
 
 </html>
